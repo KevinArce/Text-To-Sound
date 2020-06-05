@@ -16,8 +16,7 @@ file = input ("Enter the path of your File: ")
 
 parser = parser.from_file(file)
 txt = parser['content']
-speech = gTTS(text = txt, lang = 'en')
-speech.save(filename)
+speech = gTTS(text = txt, lang = 'es')
+speech.save(filename +".mp3")
 
-print ('Good to Go')
-print ('Now change the extension of the resulting file to ".MP3/.ACC/.WAV"')
+print ("Enjoy! =D")
