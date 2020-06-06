@@ -22,5 +22,5 @@ speech.save(filename +".mp3")
 print('Blow your speakers out!')
 print ("Enjoy! =D")
 
-#Turning up the Musiiiiiic! (Well, technically it's a book) xD
+#Turning the Musiiiiiic up! (Well, technically it's a book) xD
 playsound(filename+".mp3")
