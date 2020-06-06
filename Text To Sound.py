@@ -1,4 +1,4 @@
-#Text To Sound
+#Text To Sound v 0.2
 from tika import parser
 from gtts import gTTS, gTTSError
 from playsound import playsound, PlaysoundException
@@ -16,7 +16,11 @@ file = input ("Enter the path of your File: ")
 
 parser = parser.from_file(file)
 txt = parser['content']
-speech = gTTS(text = txt, lang = 'en')
+speech = gTTS(text = txt, lang = 'es')
 speech.save(filename +".mp3")
 
+print('Blow your speakers out!')
 print ("Enjoy! =D")
+
+#Turning up the Musiiiiiic! (Well, technically it's a book) xD
+playsound(filename+".mp3")
