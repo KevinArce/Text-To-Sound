@@ -16,7 +16,7 @@ file = input ("Enter the path of your File: ")
 
 parser = parser.from_file(file)
 txt = parser['content']
-speech = gTTS(text = txt, lang = 'es')
+speech = gTTS(text = txt, lang = 'en')
 speech.save(filename +".mp3")
 
 print('Blow your speakers out!')
