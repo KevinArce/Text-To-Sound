@@ -1,7 +1,8 @@
-#Text To Sound v 0.2
+#Text To Sound
 from tika import parser
 from gtts import gTTS, gTTSError
 from playsound import playsound, PlaysoundException
+import os.path
 
 #FUTURES IMPORTS 
 #for IA and Text Recognition Pattern
@@ -19,8 +20,17 @@ txt = parser['content']
 speech = gTTS(text = txt, lang = 'en')
 speech.save(filename +".mp3")
 
+#Path to save the file
+directory = input('Enter a path to save the New File: ')
+os.path.join(directory ,filename)
+if not os.path.isdir(directory):
+    os.mkdir(directory)
+
+print('Your AudioBook has been saved here: ')
+print(directory)
+
 print('Blow your speakers out!')
 print ("Enjoy! =D")
 
-#Turning the Musiiiiiic up! (Well, technically it's a book) xD
+#Turning up the Musiiiiiic! (Well, technically it's a book) xD
 playsound(filename+".mp3")
