@@ -18,7 +18,7 @@ file = input ("Enter the path of your File: ")
 parser = parser.from_file(file)
 txt = parser['content']
 speech = gTTS(text = txt, lang = 'en')
-speech.save(filename +".mp3")
+speech.save(f"{filename}.mp3")
 
 #Path to save the file
 directory = input('Enter a path to save the New File: ')
@@ -33,4 +33,4 @@ print('Blow your speakers out!')
 print ("Enjoy! =D")
 
 #Turning up the Musiiiiiic! (Well, technically it's a book) xD
-playsound(filename+".mp3")
+playsound(f"{filename}.mp3")
